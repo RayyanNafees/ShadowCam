@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .slidecontainer {
+            width: 100%;
+        }
+        
+        body {
+            background: black;
+            color: white;
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            width: 200px;
+            height: 2px;
+            background: yellow;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: .2s;
+            z-index: -1;
+            transform: rotate(90deg);
+            position: absolute;
+            right: 0px;
+            padding: 0;
+        }
+        
+        .slider:active {
+            opacity: 1;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: yellow;
+            cursor: pointer;
+            z-index: 1;
+            border: 0;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: yellow;
+            cursor: pointer;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Custom Range Slider</h1>
+
+    <div class="slidecontainer">
+        <p>Default range slider:</p>
+        <input type="range" min="1" max="100" value="50">
+        <p>Custom range slider:</p>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div>
+
+</body>
+
+</html>
