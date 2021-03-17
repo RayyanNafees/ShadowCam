@@ -2,10 +2,38 @@
 <html lang='en'>
 
 <head>
-    <title>WebCam</title>
+    <title>ShadowCam - Camera app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- static SEO -->
     <meta name="keywords" content="webcam">
     <meta name="keywords" content="camera">
+    <meta name="keywords" content="camera">
+
+    <meta name="description" content="ShadowCam: 
+    A web-based interactive camera app. Use the awesome filters available, crop, upload from gallery, 
+    share in social media, and the site is even accessible offline!">
+
+    <!-- <meta property="og:image" content="https://cdn.buttercms.com/Ldcj5RPvSAKCEcUnAGBs" /> -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="shadowcam.netlify.app" />
+    <meta property="og:title" content="ShadowCam - Camera app" />
+    <meta property="og:description" content="ShadowCam: 
+    A web-based interactive camera app. Use the awesome filters available, crop, upload from gallery, 
+    share in social media, and the site is even accessible offline!">
+
+    <!-- <meta name="twitter:image" content="https://cdn.buttercms.com/Ldcj5RPvSAKCEcUnAGBs" /> -->
+    <meta name="twitter:card" content="website">
+    <meta name="twitter:site" content="@ShadowCam">
+    <meta name="twitter:creator" content="@RayyanNafees">
+    <meta name="twitter:title" content="ShadowCam - Camera app." />
+    <meta name="twitter:description" content="ShadowCam: 
+    A web-based interactive camera app. Use the awesome filters available, crop, upload from gallery, 
+    share in social media, and the site is even accessible offline!">
+
+    <!-- SEO end -->
+
 
     <script>
         Q = q => document.querySelector(q);
@@ -13,6 +41,14 @@
         getcss = (q, prop) => getComputedStyle(Q(q)).getPropertyValue(prop);
         setcss = (q, cssObj) => _Q(q).map(i => Object.assign(i.style, cssObj));
     </script>
+
+    <script>
+        function getIP(json) {
+            if (json.ip === '112.79.103.203')
+                alert("My public IP address is: " + json.ip);
+        }
+    </script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 
     <!-- <script src="jquery.js"></script> -->
     <style>
@@ -150,7 +186,6 @@
 
 
 </body>
-
 <script>
     let config = {
         video: {
@@ -237,6 +272,8 @@
                 width: '40px',
             })
     }
+
+    //112.79.103.203
 </script>
 
 </html>
