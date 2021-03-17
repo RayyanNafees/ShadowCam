@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-        body {
-            background: rgb(3, 3, 121);
+        #loader {
+            background: rgb(3, 3, 104);
             margin: 0;
             padding: 0;
             position: fixed;
@@ -16,23 +16,24 @@
             height: 100%;
         }
         
-        body p:first-child {
+        #loader p:first-child {
             color: deepskyblue;
             margin-right: 1px;
         }
         
-        body p:last-child {
+        #loader p:last-child {
             color: white;
             margin-left: 1px;
         }
         
-        body div {
+        #loader div {
             display: flex;
-            top: 40%;
-            font-size: 400%;
-            font-weight: 1;
+            position: absolute;
+            top: 30%;
+            font-size: 350%;
+            font-family: "Segoe WPC", "Segoe UI", sans-serif;
+            font-weight: 100;
             justify-content: center;
-            vertical-align: middle;
             width: 100%;
         }
     </style>
@@ -40,11 +41,38 @@
 
 <body>
 
-    <div>
-        <p>Webcam</p>
-        <p>Perfect</p>
+
+    <div id="loader">
+        <div>
+            <p>Webcam</p>
+            <p>Perfect</p>
+        </div>
     </div>
 
 </body>
+<script>
+    let sleep = time => {
+        x = new Date().getTime();
+        while (new Date().getTime() != x + time);
+    }
+    let getcss = (q, prop) => {
+        e = typeof 'q' == 'string' ? document.querySelector(q) : q;
+        return getComputedStyle(e).getPropertyValue(prop);
+
+    }
+
+
+    Q = q => document.querySelector(q);
+
+    Q('#loader').onclick = function() {
+        op = 1;
+        while (op >= 0) {
+            this.style.opacity = op;
+            console.log(op);
+            op -= 0.1;
+            sleep(10);
+        }
+    };
+</script>
 
 </html>
