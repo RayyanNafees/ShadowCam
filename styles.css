@@ -75,7 +75,8 @@ canvas {
     left: 10px;
     border: 2px solid white;
     height: 40px;
-    width: 40px
+    width: 40px;
+    z-index: 3;
 }
 
 #reverse {
