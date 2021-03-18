@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /*.prev0 {
+            bottom: 20px;
+            left: 20px;
+            border: 2px solid white;
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+            transition: .2s;
+            background-color: rgb(150, 50, 50);
+        }*/
+        
+        canvas {
+            position: absolute;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2) inset, 0 -5px 10px 0 rgba(0, 0, 0, 0.2) inset;
+        }
+        
+        #prev1 {
+            bottom: 30%;
+            left: 35%;
+            height: 50%;
+            width: 80%;
+            background-color: rgb(50, 143, 150);
+            z-index: 3;
+        }
+        
+        #prev2 {
+            bottom: 10%;
+            left: 15%;
+            height: 80%;
+            width: 70%;
+            background-color: rgb(150, 50, 50);
+            z-index: 4;
+        }
+        
+        #prev3 {
+            bottom: 10%;
+            left: 15%;
+            height: 80%;
+            width: 70%;
+            background-color: rgb(150, 50, 50);
+            z-index: 5
+        }
+        
+        #prev4 {
+            bottom: 10%;
+            left: 15%;
+            height: 80%;
+            width: 70%;
+            background-color: rgb(150, 50, 50);
+            z-index: 4;
+        }
+        
+        #prev5 {
+            bottom: 10%;
+            left: 15%;
+            height: 80%;
+            width: 70%;
+            background-color: rgb(150, 50, 50);
+            z-index: 3
+        }
+        
+        button {
+            z-index: 6;
+            display: hidden;
+        }
+        
+        #prev {
+            position: fixed;
+            height: 25px;
+            left: 15px;
+            top: calc(50% - 12px)
+        }
+        
+        #next {
+            position: fixed;
+            height: 25px;
+            right: 15px;
+            top: calc(50% - 12px)
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="prev1"></canvas>
+    <canvas id="prev2"></canvas>
+    <canvas id="prev3"></canvas>
+    <canvas id="prev4"></canvas>
+    <canvas id="prev5"></canvas>
+
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button>
+</body>
+
+<script>
+</script>
+
+</html>

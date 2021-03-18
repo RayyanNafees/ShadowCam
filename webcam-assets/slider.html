@@ -3,6 +3,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        Q = q => document.querySelector(q);
+        _Q = q => [...document.querySelectorAll(q)];
+        getcss = (q, prop) => getComputedStyle(Q(q)).getPropertyValue(prop);
+        setcss = (q, cssObj) => _Q(q).map(i => Object.assign(i.style, cssObj));
+    </script>
+
     <style>
         .slidecontainer {
             width: 100%;
