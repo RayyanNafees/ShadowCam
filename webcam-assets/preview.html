@@ -3,40 +3,45 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        Q = q => document.querySelector(q);
+        _Q = q => [...document.querySelectorAll(q)];
+        getcss = (q, prop) => getComputedStyle(Q(q)).getPropertyValue(prop);
+        _getcss = (elt, prop) => getComputedStyle(elt).getPropertyValue(prop);
+        setcss = (q, cssObj) => _Q(q).map(i => Object.assign(i.style, cssObj));
+        let _range = stop => [...Array(stop)].map((i, n) => n);
+
+        function range(start, stop, step = 1) {
+            let _arr = [];
+            for (let i = start; i < stop; i += step)
+                _arr.push(i);
+            return _arr;
+        }
+    </script>
     <style>
-        /*.prev0 {
-            bottom: 20px;
-            left: 20px;
-            border: 2px solid white;
-            height: 30px;
-            width: 30px;
-            border-radius: 5px;
-            transition: .2s;
-            background-color: rgb(150, 50, 50);
-        }*/
-        
         canvas {
             position: absolute;
             border: 0;
             border-radius: 10px;
             box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2) inset, 0 -5px 10px 0 rgba(0, 0, 0, 0.2) inset;
+            transition: .4s;
         }
         
         #prev1 {
-            bottom: 30%;
-            left: 35%;
-            height: 50%;
+            bottom: 25%;
+            right: 20%;
+            height: 55%;
             width: 80%;
             background-color: rgb(50, 143, 150);
             z-index: 3;
         }
         
         #prev2 {
-            bottom: 10%;
-            left: 15%;
-            height: 80%;
-            width: 70%;
-            background-color: rgb(150, 50, 50);
+            bottom: calc(35%/2);
+            left: 7%;
+            height: calc(135%/2);
+            width: 60%;
+            background-color: rgb(183, 201, 23);
             z-index: 4;
         }
         
@@ -50,20 +55,20 @@
         }
         
         #prev4 {
-            bottom: 10%;
-            left: 15%;
-            height: 80%;
-            width: 70%;
-            background-color: rgb(150, 50, 50);
+            bottom: calc(35%/2);
+            right: 7%;
+            height: calc(135%/2);
+            width: 60%;
+            background-color: rgb(96, 23, 231);
             z-index: 4;
         }
         
         #prev5 {
-            bottom: 10%;
-            left: 15%;
-            height: 80%;
+            bottom: 25%;
+            left: 30%;
+            height: 55%;
             width: 70%;
-            background-color: rgb(150, 50, 50);
+            background-color: rgb(185, 19, 82);
             z-index: 3
         }
         
@@ -100,6 +105,20 @@
 </body>
 
 <script>
+    let test = (func, ev = 'click') => document.body['on' + ev] = func;
+    let prev = [1, 1, 2, 3, 4, 5].map(i => Q('#prev' + i));
+    prev.map(i => i.style.background = _getcss(i, 'background-color'));
+    let _prev = Q('#prev');
+    let _next = Q('#next');
+    test(function() {
+        prev[1].id = 'prev2';
+        prev[2].id = 'prev3';
+        prev[3].id = 'prev4';
+        prev[4].id = 'prev5';
+    });
+
+    _next.onclick = function() {}
 </script>
+
 
 </html>
