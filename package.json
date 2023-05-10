@@ -19,7 +19,6 @@
     "astro-seo": "^0.7.2",
     "dexie": "^3.2.3",
     "jquery": "^3.6.4",
-    "sharp": "^0.32.1",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
