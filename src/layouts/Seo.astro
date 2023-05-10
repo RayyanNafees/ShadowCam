@@ -1,0 +1,58 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ShadowCam - Camera app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- static SEO -->
+    <meta name="keywords" content="webcam, camera, shadowcam, shadow cam" />
+
+    <meta
+      name="description"
+      content="ShadowCam: 
+    A web-based interactive camera app. Use the awesome filters available, crop, upload from gallery, 
+    share in social media, and the site is even accessible offline!"
+    />
+
+    <!-- <meta property="og:image" content="https://cdn.buttercms.com/Ldcj5RPvSAKCEcUnAGBs" /> -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="shadowcam.netlify.app" />
+    <meta property="og:title" content="ShadowCam - Camera app" />
+    <meta
+      property="og:description"
+      content="ShadowCam: 
+    A web-based interactive camera app. Use the awesome filters available, crop, upload from gallery, 
+    share in social media, and the site is even accessible offline!"
+    />
+
+    <!-- <meta name="twitter:image" content="https://cdn.buttercms.com/Ldcj5RPvSAKCEcUnAGBs" /> -->
+    <meta name="twitter:card" content="website" />
+    <meta name="twitter:site" content="@ShadowCam" />
+    <meta name="twitter:creator" content="@RayyanNafees" />
+    <meta name="twitter:title" content="ShadowCam - Camera app." />
+    <meta
+      name="twitter:description"
+      content="ShadowCam: 
+    A web-based interactive camera app. Use the awesome filters available, crop, upload from gallery, 
+    share in social media, and the site is even accessible offline!"
+    />
+
+    <!-- SEO end -->
+  </head>
+
+  <body>
+    <div id="loader">
+      <div>
+        <p>Webcam</p>
+        <p>Perfect</p>
+      </div>
+    </div>
+    <slot />
+  </body>
+  <script>
+    document.getElementById("loader").remove();
+  </script>
+</html>
