@@ -21,10 +21,7 @@ video {
 }
 
 #shoot:active {
-  height: 70px;
-  width: 70px;
-  left: calc(50% - 35px);
-  bottom: calc(10% - 10px);
+  scale: 140%;
 }
 
 #bright {
