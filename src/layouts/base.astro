@@ -1,0 +1,52 @@
+---
+const meta = {
+  keywords: ["webcam", "camera", "shadowcam", "shadow cam"],
+  description: `ShadowCam: 
+    A web-based interactive camera app. Use the awesome filters available, crop, upload from gallery, 
+    share in social media, and the site is even accessible offline!`,
+  title: "ShadowCam - Camera app",
+  url: "https://shadowcam.netlify.app",
+//   image: "https://cdn.buttercms.com/Ldcj5RPvSAKCEcUnAGBs",
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{meta.title}</title>
+    <link rel="stylesheet" href="@/styles/loader.css" />
+    <link rel="stylesheet" href="@/styles/index.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- static SEO -->
+    <meta name="keywords" content={meta.keywords.join(", ")} />
+    <meta name="description" content={meta.description} />
+
+    <!-- <meta property="og:image" content="https://cdn.buttercms.com/Ldcj5RPvSAKCEcUnAGBs" /> -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={meta.url} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+
+    <!-- <meta name="twitter:image" content="https://cdn.buttercms.com/Ldcj5RPvSAKCEcUnAGBs" /> -->
+    <meta name="twitter:card" content="website" />
+    <meta name="twitter:site" content={meta.url} />
+    <meta name="twitter:creator" content="@RayyanNafees" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+  </head>
+
+  <body>
+    <div id="loader">
+      <div>
+        <p>Webcam</p>
+        <p>Perfect</p>
+      </div>
+    </div>
+
+    <slot />
+    <script src="@/lib/video.ts"></script>
+    <script src="@/lib/capture.ts"></script>
+  </body>
+</html>

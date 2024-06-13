@@ -1,0 +1,40 @@
+---
+import Base from "@/layouts/base.astro";
+---
+
+<Base>
+
+  <video autoplay>Video stream not available.</video>
+
+  <div class="nav">
+    <div id="shoot"></div>
+
+    <div hidden>
+      <a download>
+        <button id="download">Download</button>
+      </a>
+      <a target="_blank" onclick="this.href=photo.getAttribute( 'src')"
+        ><button id="preview">Preview</button></a
+      >
+    </div>
+
+    <input type="range" min="0.5" max="2" step="0.01" value="1" id="bright" />
+
+    <button id="reverse">Reverse</button>
+  </div>
+
+  <!-- 
+    <input type="file" />
+ -->
+
+  <canvas></canvas>
+
+  <div class="output" hidden>
+    <img
+      id="photo"
+      alt="The screen capture will appear in this box."
+      width="212px"
+      height="161px"
+    />
+  </div>
+</Base>
