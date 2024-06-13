@@ -57,8 +57,8 @@ brightness.addEventListener("input", function changebright() {
 canvas.onclick = () => {
 	Object.assign(canvas.style, {
 		transition: "0.5s",
-		height: `${0.8 * video.height}px`,
-		width: `${0.8 * video.width}px`,
+		height: `${1.25* video.videoHeight}px`,
+		width: `${ 1.25* video.videoWidth}px`,
 		position: "absolute",
 		bottom: "10%",
 		left: "10%",
